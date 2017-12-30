@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/spike1292
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://henkbakker.net
+  * I am spike1292 (https://keybase.io/spike1292) on keybase.
+  * I have a public key ASBAg9H62RU0z6FJk-4mHXcmlD0-LBdROOhiBuQnaGPxbQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204083d1fad91534cfa14993ee261d7726943d3e2c175138e86206e4276863f16d0a",
+      "host": "keybase.io",
+      "kid": "01204083d1fad91534cfa14993ee261d7726943d3e2c175138e86206e4276863f16d0a",
+      "uid": "63ad9af4c98c4c9e201f9866f44ba219",
+      "username": "spike1292"
+    },
+    "merkle_root": {
+      "ctime": 1514651991,
+      "hash": "8a311dc8e51cf05d800867c630ea5e21359bb78805ac3621ab2d57e8aa7c24d3ee4b02403e5bda7222eeb71810677eb00b3fb36675198f46055200b191b2aac8",
+      "hash_meta": "be0ccef2732c7fb4c808f287ce70bae3e033322254ec97d755b53b9807afa4f8",
+      "seqno": 1870435
+    },
+    "service": {
+      "hostname": "henkbakker.net",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.38"
+  },
+  "ctime": 1514652008,
+  "expire_in": 504576000,
+  "prev": "7af76b4d2fb9f1b640ec8d6fca187905df534db88659c772eaa728b62477d645",
+  "seqno": 39,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgQIPR+tkVNM+hSZPuJh13JpQ9PiwXUTjoYgbkJ2hj8W0Kp3BheWxvYWTFA0d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNDA4M2QxZmFkOTE1MzRjZmExNDk5M2VlMjYxZDc3MjY5NDNkM2UyYzE3NTEzOGU4NjIwNmU0Mjc2ODYzZjE2ZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDA4M2QxZmFkOTE1MzRjZmExNDk5M2VlMjYxZDc3MjY5NDNkM2UyYzE3NTEzOGU4NjIwNmU0Mjc2ODYzZjE2ZDBhIiwidWlkIjoiNjNhZDlhZjRjOThjNGM5ZTIwMWY5ODY2ZjQ0YmEyMTkiLCJ1c2VybmFtZSI6InNwaWtlMTI5MiJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUxNDY1MTk5MSwiaGFzaCI6IjhhMzExZGM4ZTUxY2YwNWQ4MDA4NjdjNjMwZWE1ZTIxMzU5YmI3ODgwNWFjMzYyMWFiMmQ1N2U4YWE3YzI0ZDNlZTRiMDI0MDNlNWJkYTcyMjJlZWI3MTgxMDY3N2ViMDBiM2ZiMzY2NzUxOThmNDYwNTUyMDBiMTkxYjJhYWM4IiwiaGFzaF9tZXRhIjoiYmUwY2NlZjI3MzJjN2ZiNGM4MDhmMjg3Y2U3MGJhZTNlMDMzMzIyMjU0ZWM5N2Q3NTViNTNiOTgwN2FmYTRmOCIsInNlcW5vIjoxODcwNDM1fSwic2VydmljZSI6eyJob3N0bmFtZSI6ImhlbmtiYWtrZXIubmV0IiwicHJvdG9jb2wiOiJodHRwOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4zOCJ9LCJjdGltZSI6MTUxNDY1MjAwOCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiI3YWY3NmI0ZDJmYjlmMWI2NDBlYzhkNmZjYTE4NzkwNWRmNTM0ZGI4ODY1OWM3NzJlYWE3MjhiNjI0NzdkNjQ1Iiwic2Vxbm8iOjM5LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQOxNWD1pH8LnTdUjJM9NCXQPc2Y0LNCPt88uaMaEDgRVksx5EQRejbPq3FzLV578Dj0Fm9Abek/Ea6UBECO89gKoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCsXK+ahBAXuHNpSroxJsbZ+aRlzWTdBCt34InJS3yWF6N0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/spike1292
+
+==================================================================
