@@ -20,6 +20,7 @@ url: http://henkbakker.net
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
+timezone: "America/Vancouver"
 
 # To enable google analytics, supply your token below
 analytics-google: 'UA-8856702-6'
@@ -58,7 +59,7 @@ authors:
         name: Henk Bakker
         bio: A Man who travels the world eating noodles
         external-image: false
-        picture: assets/images/profile.jpg
+        picture: assets/images/henk.jpg
         twitter: spike1292
 
 # do you want a larger site? change the option below
@@ -95,12 +96,28 @@ show-author: true
 # do you want some animations?
 animation: false
 
+sass:
+  sass_dir: _sass
+  style: compressed
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-admin
+
+exclude:
+  - CHANGELOG.md
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Vagrantfile
+  - FAQ.md
+  - Rakefile
+  - travis.sh
 
 jekyll-mentions:
     base_url: https://github.com
