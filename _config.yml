@@ -1,6 +1,6 @@
 # main text of home
 name: Henk Bakker
-bio: A Man who travels the world eating noodles
+bio: TypeScript addict, @angular fanboy, @NativeScript hacker
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -12,7 +12,7 @@ picture: assets/images/henk.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: true
+resume: false
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
@@ -36,7 +36,8 @@ disqus:
 
 # if you don't have any of social below, comment the line
 facebook: spike1292
-twitter: spike1292
+twitter:
+  username: spike1292
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
@@ -51,13 +52,13 @@ github: spike1292
 medium: spike1292
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+email: hello@henkbakker.net
 keybase: spike1292
 
 authors:
     henkbakker:
         name: Henk Bakker
-        bio: A Man who travels the world eating noodles
+        bio: TypeScript addict, @angular fanboy, @NativeScript hacker
         external-image: false
         picture: assets/images/henk.jpg
         twitter: spike1292
@@ -107,6 +108,7 @@ plugins:
   - jemoji
   - jekyll-admin
   - jekyll-sitemap
+  - jekyll-mentions
 
 exclude:
   - CHANGELOG.md

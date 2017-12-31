@@ -4,43 +4,59 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Hi, I'm Henk Bakker a developer from the Netherlands. Currently I'm working as a consultant for <a href="http://quintor.nl" target="_blank" rel="noopener noreferrer" title="Quintor">Quintor</a></p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I started as a Backend developer, focusing on the language Java. As the market changed and required more Frontend developers, I adapted my skillset and broadened it with JavaScript, HTML5 an CSS. As a Frontend developer with a Backend background, I combine the design principles commonly used in the Backend, with the a-sync responsive nature of the Frontend. As a perfectionist, I'm always searching for new technologies able to create even stronger and better applications. </p>
+
+<p>In my spare time I like to fool around with docker containers on my kubernetes Raspberry Pi cluster.</p>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
+	<li>Javascript
+		<ul>
+			<li>NodeJS</li>
+			<li>Angular &amp; AngularJS</li>
+			<li>ReactJS</li>
+		</ul>
+	</li>
+	<li>Mobile
+		<ul>
+			<li>iOS (Objective C)</li>
+			<li>Nativescript</li>
+			<li>Cordova (Ionic, Phonegap)</li>
+		</ul>
+	</li>
+	<li>HTML</li>
 	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>NodeJS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
+	<li>CSS
+		<ul>
+			<li>Sass</li>
+			<li>Bootstrap</li>
+		</ul>
+	</li>
+	<li>Buildtools
+		<ul>
+			<li>Webpack</li>
+			<li>Gulp</li>
+			<li>Grunt</li>
+		</ul>
+	</li>
 	<li>Git</li>
-	<li>PHP</li>
-	<li>Python</li>
-	<li>MySQL - MongoDB</li>
+	<li>Databases
+		<ul>
+			<li>MySQL</li>
+			<li>MongoDB</li>
+		</ul>
+	</li>
+	<li>Java
+		<ul>
+			<li>Spring &amp; Spring boot</li>
+			<li>Java EE 6</li>
+		</ul>
+	</li>
 	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>BDD &amp; TDD</li>
+	<li>Continuous Integration &amp; Continuous Delivery</li>
 </ul>
 
-<h2>Projects</h2>
-
-<ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
-</ul>
