@@ -106,6 +106,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-admin
+  - jekyll-sitemap
 
 exclude:
   - CHANGELOG.md
