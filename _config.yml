@@ -20,7 +20,7 @@ url: http://henkbakker.net
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
-timezone: "America/Vancouver"
+timezone: "Europe/Amsterdam"
 
 # To enable google analytics, supply your token below
 analytics-google: 'UA-8856702-6'
