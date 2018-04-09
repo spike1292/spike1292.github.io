@@ -140,4 +140,4 @@ pwa:
       - route: /assets\/images/
         strategy: cacheFirst
       - route: /^https:\/\/.*\.cloudfront\.net\/.*/
-        strategy: cacheFirst
+        strategy: staleWhileRevalidate
