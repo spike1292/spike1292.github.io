@@ -18,6 +18,7 @@ resume-url: https://google.com/?q=my+resume
 
 url: https://henkbakker.net
 # your url: http://USERNAME.github.io
+# baseurl: ""
 
 permalink: /:title/
 timezone: "Europe/Amsterdam"
@@ -77,7 +78,7 @@ projects: false
 
 # if you don't need "about" or "blog", comment them out below
 about: true
-blog: false
+blog: true
 
 # do you want to show the "read time" of the posts?
 read-time: true
@@ -109,6 +110,7 @@ plugins:
   - jekyll-admin
   - jekyll-sitemap
   - jekyll-mentions
+  # - jekyll-pwa-plugin
 
 exclude:
   - CHANGELOG.md
@@ -124,3 +126,15 @@ exclude:
 
 jekyll-mentions:
     base_url: https://github.com
+
+pwa:
+  sw_filename: service-worker.js # Required
+  dest_js_directory: assets/js # Required
+  cache_name: henks-blog
+  precache_recent_posts_num: 5 # Optional
+  # precache_glob_patterns: # Optional
+  #   - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
+  #   - index.html
+  #   - "assets/images/henk.jpg"
+  # precache_glob_ignores: # Optional
+  #   # - sw-register.js
