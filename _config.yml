@@ -110,7 +110,7 @@ plugins:
   - jekyll-admin
   - jekyll-sitemap
   - jekyll-mentions
-  # - jekyll-pwa-plugin
+  - jekyll-pwa-plugin
 
 exclude:
   - CHANGELOG.md
@@ -132,9 +132,10 @@ pwa:
   dest_js_directory: assets/js # Required
   cache_name: henks-blog
   precache_recent_posts_num: 5 # Optional
-  # precache_glob_patterns: # Optional
-  #   - "{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff}"
-  #   - index.html
-  #   - "assets/images/henk.jpg"
-  # precache_glob_ignores: # Optional
-  #   # - sw-register.js
+  precache_glob_patterns: # Optional
+    - "assets/images/favicon/manifest.json"
+    - "assets/images/henk.jpg"
+    - "**/*.{html,js,css}"
+  runtime_cache: # Optional
+      - route: /assets\/images/
+        strategy: cacheFirst
