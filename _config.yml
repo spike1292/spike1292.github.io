@@ -123,6 +123,11 @@ exclude:
   - FAQ.md
   - Rakefile
   - travis.sh
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 jekyll-mentions:
     base_url: https://github.com
