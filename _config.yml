@@ -8,7 +8,7 @@ description: A blog about web development with Angular & React
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/henk.jpg
+picture: /assets/images/henk.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -18,8 +18,9 @@ resume-url: https://google.com/?q=my+resume
 
 url: https://henkbakker.net
 # your url: http://USERNAME.github.io
+baseurl: ""
 
-permalink: /:title/
+permalink: /blog/:title/
 timezone: "Europe/Amsterdam"
 
 # To enable google analytics, supply your token below
@@ -109,6 +110,7 @@ plugins:
   - jekyll-admin
   - jekyll-sitemap
   - jekyll-mentions
+  - jekyll-pwa-plugin
 
 exclude:
   - CHANGELOG.md
@@ -121,6 +123,26 @@ exclude:
   - FAQ.md
   - Rakefile
   - travis.sh
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 jekyll-mentions:
     base_url: https://github.com
+
+pwa:
+  sw_filename: service-worker.js # Required
+  dest_js_directory: assets/js # Required
+  cache_name: henks-blog
+  precache_recent_posts_num: 5 # Optional
+  precache_glob_patterns: # Optional
+    - "assets/images/favicon/manifest.json"
+    - "assets/images/henk.jpg"
+    - "**/*.{html,js,css}"
+  runtime_cache: # Optional
+      - route: /assets\/images/
+        strategy: cacheFirst
+      - route: /^https:\/\/.*\.cloudfront\.net\/.*/
+        strategy: staleWhileRevalidate
