@@ -18,9 +18,9 @@ resume-url: https://google.com/?q=my+resume
 
 url: https://henkbakker.net
 # your url: http://USERNAME.github.io
-# baseurl: ""
+baseurl: ""
 
-permalink: /:title/
+permalink: /blog/:title/
 timezone: "Europe/Amsterdam"
 
 # To enable google analytics, supply your token below
