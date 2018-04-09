@@ -139,3 +139,5 @@ pwa:
   runtime_cache: # Optional
       - route: /assets\/images/
         strategy: cacheFirst
+      - route: /^https:\/\/.*\.cloudfront\.net\/.*/
+        strategy: cacheFirst
