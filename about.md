@@ -2,7 +2,7 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.url }}/{{ site.picture }})
+![Profile Image]({{ site.picture | absolute_url }})
 
 <p>Hi, I'm Henk Bakker a developer from the Netherlands. Currently I'm working as a consultant for <a href="http://quintor.nl" target="_blank" rel="noopener noreferrer" title="Quintor">Quintor</a></p>
 
