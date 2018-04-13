@@ -131,6 +131,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - workbox-config.js
 
 jekyll-mentions:
     base_url: https://github.com
