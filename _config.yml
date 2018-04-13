@@ -106,10 +106,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
-  - jemoji
+#   - jemoji
   - jekyll-admin
   - jekyll-sitemap
-  - jekyll-mentions
+#   - jekyll-mentions
   - jekyll-pwa-plugin
 
 include:
