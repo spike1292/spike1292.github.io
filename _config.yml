@@ -112,6 +112,9 @@ plugins:
   - jekyll-mentions
   - jekyll-pwa-plugin
 
+include:
+  - _headers
+
 exclude:
   - CHANGELOG.md
   - Dockerfile
