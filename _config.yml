@@ -110,7 +110,7 @@ plugins:
   - jekyll-admin
   - jekyll-sitemap
 #   - jekyll-mentions
-  - jekyll-pwa-plugin
+#   - jekyll-pwa-plugin
 
 include:
   - _headers
