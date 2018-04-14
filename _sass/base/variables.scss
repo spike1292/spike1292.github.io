@@ -1,5 +1,8 @@
-$fontSans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$fontMonospace: "Consolas", Liberation Mono, Menlo, Courier, monospace;
+$fontSans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+$fontMonospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 
 $alpha: #666;
 $beta: #222;
