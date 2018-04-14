@@ -9,3 +9,6 @@
   
 /assets/*
 	Cache-Control: public, max-age=360000 
+
+/service-worker.js
+	Cache-Control: no-cache
