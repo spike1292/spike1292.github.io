@@ -2,9 +2,10 @@
 title: About
 layout: page
 ---
-![Profile Image]({{ site.picture }})
 
-<p>Hi, I'm Henk Bakker a developer from the Netherlands. Currently I'm working as a consultant for <a href="http://quintor.nl" target="_blank" rel="noopener noreferrer" title="Quintor">Quintor</a></p>
+![Henk Bakker]({{ site.picture }})
+
+<p>Hi, I'm Henk Bakker a developer from the Netherlands. Currently I'm working as a consultant for <a href="https://quintor.nl" target="_blank" rel="noopener noreferrer">Quintor</a></p>
 
 <p>I started as a Backend developer, focusing on the language Java. As the market changed and required more Frontend developers, I adapted my skillset and broadened it with JavaScript, HTML5 an CSS. As a Frontend developer with a Backend background, I combine the design principles commonly used in the Backend, with the a-sync responsive nature of the Frontend. As a perfectionist, I'm always searching for new technologies able to create even stronger and better applications. </p>
 
@@ -59,4 +60,3 @@ layout: page
 	<li>BDD &amp; TDD</li>
 	<li>Continuous Integration &amp; Continuous Delivery</li>
 </ul>
-
