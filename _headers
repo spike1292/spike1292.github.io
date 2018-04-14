@@ -5,7 +5,7 @@
 	X-XSS-Protection: 1; mode=block
 	# Prevent browsers from incorrectly detecting non-scripts as scripts
 	X-Content-Type-Options: nosniff
-	Referrer-Policy: "same-origin"
+	Referrer-Policy: same-origin
 	Content-Security-Policy-Report-Only: default-src 'none' ; script-src 'self' https://www.google-analytics.com/analytics.js https://d33wubrfki0l68.cloudfront.net; img-src 'self' https://www.google-analytics.com/r/collect https://www.google-analytics.com/collect https://d33wubrfki0l68.cloudfront.net; connect-src https://d33wubrfki0l68.cloudfront.net https://www.google-analytics.com; style-src 'self' 'unsafe-inline' ; object-src 'none' ; worker-src 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://henkbakker.report-uri.com/r/d/csp/reportOnly; 
   
 /assets/*
