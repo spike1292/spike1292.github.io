@@ -6,7 +6,7 @@ module.exports = {
         "**/*.{html,js,css}"
     ],
     globIgnores: ["assets/js/workbox-v3.1.0/**/*"],
-    swDest: "service-worker.js",
+    swDest: "_site/service-worker.js",
     swSrc: "service-worker.template.js",
     modifyUrlPrefix: {
         // Remove a '/dist' prefix from the URLs:
