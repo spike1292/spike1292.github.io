@@ -8,6 +8,7 @@ namespace :build do
     desc "build development site"
     task :dev => [:clean] do
         sh "bundle exec jekyll build --drafts --config _config.yml,_config-dev.yml"
+        sh "npm run sw-manifest"
     end
 
     desc "build production site"
