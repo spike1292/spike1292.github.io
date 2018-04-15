@@ -24,6 +24,12 @@
     }
 
     > .toleft {
+        text-align: left;
+
+        > .caption {
+            text-align: left;
+        }
+
         @media #{$above} {
             margin-right: 2%;
         }
@@ -35,6 +41,12 @@
     }
 
     > .toright {
+        text-align: right;
+
+        > .caption {
+            text-align: right;
+        }
+
         @media #{$above} {
             margin-left: 2%;
             vertical-align: top;
