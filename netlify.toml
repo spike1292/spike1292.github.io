@@ -19,7 +19,7 @@
 
 [build]
     publish = "_site"
-    command = "jekyll build"
+    command = "bundle exec rake build:prod"
 
 [context."feature/accessibility"]
     command = "bundle exec rake build:prod"
