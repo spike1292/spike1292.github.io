@@ -1,0 +1,23 @@
+{
+    "name": "henks-blog",
+    "version": "0.0.0",
+    "description": "Jekyll powered blog",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sw-manifest": "workbox injectManifest workbox-config.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spike1292/spike1292.github.io.git"
+    },
+    "author": "Henk Bakker",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/spike1292/spike1292.github.io/issues"
+    },
+    "homepage": "https://henkbakker.net",
+    "devDependencies": {
+        "workbox-cli": "3.1.0"
+    }
+}
