@@ -5,7 +5,7 @@ html {
 
 body {
     line-height: 1;
-    font: 16px $fontSans;
+    font: 20px $fontSans;
     color: $alpha;
 }
 
@@ -20,22 +20,22 @@ h4 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     letter-spacing: -1px;
     color: $beta;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 h4 {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 a {
@@ -119,7 +119,7 @@ code,
 tt {
     padding: 1px 0;
     font-family: $fontMonospace;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
     background: #fff;
     border-radius: 2px;
@@ -156,7 +156,7 @@ pre {
 }
 
 .wrapper-normal {
-    max-width: 560px;
+    max-width: 740px;
 }
 
 .wrapper-large {
