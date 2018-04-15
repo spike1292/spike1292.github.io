@@ -1,0 +1,25 @@
+[[headers]]
+    for = "/*"
+    [headers.values]
+        Content-Security-Policy-Report-Only = "default-src 'none' ; script-src 'self' https://www.google-analytics.com/analytics.js https://d33wubrfki0l68.cloudfront.net; img-src 'self' https://www.google-analytics.com/r/collect https://www.google-analytics.com/collect https://d33wubrfki0l68.cloudfront.net; connect-src 'self' https://d33wubrfki0l68.cloudfront.net https://www.google-analytics.com; style-src 'self' 'unsafe-inline' ; object-src 'none' ; worker-src 'self' ; manifest-src 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://henkbakker.report-uri.com/r/d/csp/reportOnly;"
+        Referrer-Policy = "same-origin"
+        X-Content-Type-Options = "nosniff"
+        X-Frame-Options = "DENY"
+        X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+    for = "/assets/*"
+    [headers.values]
+        Cache-Control = "public, max-age=2628000"
+
+[[headers]]
+    for = "/service-worker.js"
+    [headers.values]
+        Cache-Control = "no-cache"
+
+[build]
+    publish = "_site"
+    command = "jekyll build"
+
+[context."feature/accessibility"]
+    command = "bundle exec rake build:prod"
