@@ -10,8 +10,11 @@
  * and re-run your build process.
  * See https://goo.gl/2aRDsh
  */
-importScripts("/assets/js/workbox-v3.1.0/workbox-sw.js");
-workbox.setConfig({ modulePathPrefix: "/assets/js/workbox-v3.1.0/" });
+importScripts("/assets/js/workbox-v4.3.1/workbox-sw.js");
+workbox.setConfig({
+    modulePathPrefix: "/assets/js/workbox-v4.3.1/",
+    debug: true
+});
 
 workbox.core.setCacheNameDetails({ prefix: "blog" });
 
@@ -20,18 +23,34 @@ workbox.core.setCacheNameDetails({ prefix: "blog" });
  * requests for URLs in the manifest.
  * See https://goo.gl/S9QRab
  */
-workbox.precaching.suppressWarnings();
+
+// workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute([]);
+workbox.precaching.cleanupOutdatedCaches();
 
 workbox.routing.registerRoute(
     /assets\/images/,
-    workbox.strategies.cacheFirst({
-        plugins: [new workbox.expiration.Plugin({ maxEntries: 10 })]
+    new workbox.strategies.CacheFirst({
+        cacheName: "blog-images",
+        plugins: [
+            new workbox.expiration.Plugin({
+                maxEntries: 10,
+                purgeOnQuotaError: true
+            })
+        ]
     }),
     "GET"
 );
 workbox.routing.registerRoute(
     /^https:\/\/.*\.cloudfront\.net\/.*/,
-    workbox.strategies.staleWhileRevalidate(),
+    new workbox.strategies.StaleWhileRevalidate({ cacheName: "cloudfront/js" }),
     "GET"
 );
+workbox.routing.registerRoute(
+    /assets\/js/,
+    new workbox.strategies.StaleWhileRevalidate({ cacheName: "local/js" }),
+    "GET"
+);
+
+// workbox.core.skipWaiting();
+// workbox.core.clientsClaim();

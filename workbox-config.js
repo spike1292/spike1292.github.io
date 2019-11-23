@@ -5,10 +5,13 @@ module.exports = {
         "assets/images/henk.jpg",
         "**/*.{html,js,css}"
     ],
-    globIgnores: ["assets/js/workbox-v3.1.0/**/*"],
+    globIgnores: [
+        "assets/js/workbox-v3.1.0/**/*",
+        "assets/js/workbox-v4.3.1/**/*"
+    ],
     swDest: "_site/service-worker.js",
     swSrc: "service-worker.template.js",
-    modifyUrlPrefix: {
+    modifyURLPrefix: {
         // Remove a '/dist' prefix from the URLs:
         "": "/"
     }

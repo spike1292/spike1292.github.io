@@ -16,8 +16,8 @@
     "bugs": {
         "url": "https://github.com/spike1292/spike1292.github.io/issues"
     },
-    "homepage": "https://henkbakker.net",
+    "homepage": "https://henkbakker.dev",
     "devDependencies": {
-        "workbox-cli": "3.1.0"
+        "workbox-cli": "4.3.1"
     }
 }
