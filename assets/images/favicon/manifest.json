@@ -1,6 +1,7 @@
 {
     "name": "Henk Bakker",
-    "short_name": "H. Bakker",
+    "short_name": "H.H. Bakker",
+    "start_url": "/",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
