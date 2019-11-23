@@ -21,21 +21,24 @@ end
 namespace :serve do
 
     desc "serve development site"
-    task :dev => [:clean] do
+    task :dev => [:clean, :workbox] do
         sh "bundle exec jekyll serve --drafts --config _config.yml,_config-dev.yml"
-        sh "npm run sw-manifest"
     end
 
     desc "serve production site"
-    task :prod => [:clean] do
+    task :prod => [:clean, :workbox] do
         sh "JEKYLL_ENV=production bundle exec jekyll serve --config=_config.yml"
-        sh "npm run sw-manifest"
     end
 end
 
 desc "cleans the output directory"
     task :clean do
     sh "bundle exec jekyll clean"
+end
+
+desc "runs workbox-cli in the background"
+    task :workbox do
+    sh "nohup npm run sw-manifest:watch > rake.out 2>&1 &"
 end
 
 # rake test
