@@ -23,11 +23,13 @@ namespace :serve do
     desc "serve development site"
     task :dev => [:clean] do
         sh "bundle exec jekyll serve --drafts --config _config.yml,_config-dev.yml"
+        sh "npm run sw-manifest"
     end
 
     desc "serve production site"
     task :prod => [:clean] do
         sh "JEKYLL_ENV=production bundle exec jekyll serve --config=_config.yml"
+        sh "npm run sw-manifest"
     end
 end
 
