@@ -1,7 +1,7 @@
 [[headers]]
     for = "/*"
     [headers.values]
-        Content-Security-Policy-Report-Only = "default-src 'none' ; script-src 'self' https://www.googletagmanager.com/gtag/js; img-src 'self' https://www.google-analytics.com/r/collect https://www.google-analytics.com/collect; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' ; object-src 'none' ; worker-src 'self' ; manifest-src 'self' ; report-uri https://henkbakker.report-uri.com/r/d/csp/reportOnly;"
+        Content-Security-Policy-Report-Only = "default-src 'none' ; script-src 'self' https://www.google-analytics.com/analytics.js https://www.googletagmanager.com/gtag/js; img-src 'self' https://www.google-analytics.com/r/collect https://www.google-analytics.com/collect; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' ; object-src 'none' ; worker-src 'self' ; manifest-src 'self' ; report-uri https://henkbakker.report-uri.com/r/d/csp/reportOnly;"
         Content-Security-Policy = "upgrade-insecure-requests; block-all-mixed-content; report-uri https://henkbakker.report-uri.com/r/d/csp/enforce;"
         Referrer-Policy = "same-origin"
         X-Content-Type-Options = "nosniff"
