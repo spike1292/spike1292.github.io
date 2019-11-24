@@ -3,4 +3,7 @@ _site
 .sass-cache
 node_modules
 *.out
-assets/js/service-worker.optimized.js
+_build
+.jekyll-cache/
+.jekyll-metadata
+assets/js/sw-register.js

@@ -129,6 +129,12 @@ exclude:
     - vendor/ruby/
     - workbox-config.js
     - service-worker.template.js
+    - rake.out
+    - package-lock.json
+    - package.json
+    - rollup.config.mjs
+    - assets/js/sw-register.mjs
+    - assets/js/service-worker.template.mjs
 
 jekyll-mentions:
     base_url: https://github.com

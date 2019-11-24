@@ -8,13 +8,13 @@ namespace :build do
     desc "build development site"
     task :dev => [:clean] do
         sh "bundle exec jekyll build --drafts --config _config.yml,_config-dev.yml"
-        sh "npm run sw-manifest"
+        sh "npm run build"
     end
 
     desc "build production site"
     task :prod => [:clean] do
         sh "JEKYLL_ENV=production bundle exec jekyll build --config=_config.yml"
-        sh "npm run sw-manifest"
+        sh "npm run build"
     end
 end
 
@@ -37,8 +37,8 @@ desc "cleans the output directory"
 end
 
 desc "runs workbox-cli in the background"
-    task :workbox do
-    sh "nohup npm run sw-manifest:watch > rake.out 2>&1 &"
+    task :workbox  do
+    sh "nohup npm run watch > rake.out 2>&1 &"
 end
 
 # rake test

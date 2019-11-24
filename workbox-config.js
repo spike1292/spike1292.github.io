@@ -10,7 +10,7 @@ module.exports = {
         "assets/js/workbox-v4.3.1/**/*"
     ],
     swDest: "_site/service-worker.js",
-    swSrc: "assets/js/service-worker.optimized.js",
+    swSrc: "_build/service-worker.js",
     modifyURLPrefix: {
         // Remove a '/dist' prefix from the URLs:
         "": "/"

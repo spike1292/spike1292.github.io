@@ -25,13 +25,19 @@ export default [
             }),
             compiler()
         ],
-        output: {
-            file: "assets/js/sw-register.js",
-            format: "iife"
-        }
+        output: [
+            {
+                file: "assets/js/sw-register.js",
+                format: "iife"
+            },
+            {
+                file: "_site/assets/js/sw-register.js",
+                format: "iife"
+            }
+        ]
     },
     {
-        input: "assets/js/service-worker.template.js",
+        input: "assets/js/service-worker.template.mjs",
         plugins: [
             resolve(),
             babel({
@@ -48,7 +54,7 @@ export default [
             compiler()
         ],
         output: {
-            file: "assets/js/service-worker.optimized.js",
+            file: "_build/service-worker.js",
             format: "iife"
         }
     }
