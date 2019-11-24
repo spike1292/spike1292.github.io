@@ -20,3 +20,9 @@
 [build]
     publish = "_site"
     command = "bundle exec rake build:prod"
+
+[[redirects]]
+  from = "https://henkbakker.dev/* "
+  to = "https://henkbakker.net/:splat"
+  status = 301
+  force = true
