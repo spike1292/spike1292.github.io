@@ -43,14 +43,35 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
     /^https:\/\/.*\.cloudfront\.net\/.*/,
-    new workbox.strategies.StaleWhileRevalidate({ cacheName: "cloudfront/js" }),
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: "cloudfront/js",
+        plugins: [
+            new workbox.broadcastUpdate.Plugin({
+                channelName: "cloudfront-updates"
+            })
+        ]
+    }),
     "GET"
 );
 workbox.routing.registerRoute(
     /assets\/js/,
-    new workbox.strategies.StaleWhileRevalidate({ cacheName: "local/js" }),
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: "local/js",
+        plugins: [
+            new workbox.broadcastUpdate.Plugin({
+                channelName: "js-updates"
+            })
+        ]
+    }),
     "GET"
 );
 
-// workbox.core.skipWaiting();
-// workbox.core.clientsClaim();
+self.addEventListener("message", event => {
+    if (event.data && event.data.type === "SKIP_WAITING") {
+        workbox.core.skipWaiting();
+    }
+});
+
+// Updating SW lifecycle to update the app after user triggered refresh
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();

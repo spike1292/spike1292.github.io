@@ -5,8 +5,11 @@
     "private": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "sw-manifest": "workbox injectManifest workbox-config.js",
         "sw-manifest:watch": "workbox injectManifest workbox-config.js --watch",
-        "sw-manifest": "workbox injectManifest workbox-config.js"
+        "rollup": "rollup --config rollup.config.mjs",
+        "rollup:watch": "rollup --config rollup.config.mjs --watch",
+        "build": "npm run rollup && npm run sw-manifest"
     },
     "repository": {
         "type": "git",
@@ -19,6 +22,15 @@
     },
     "homepage": "https://henkbakker.dev",
     "devDependencies": {
+        "@ampproject/rollup-plugin-closure-compiler": "^0.13.0",
+        "@babel/core": "^7.7.4",
+        "@babel/preset-env": "^7.7.4",
+        "rollup": "^1.27.4",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-node-resolve": "^5.2.0",
         "workbox-cli": "4.3.1"
+    },
+    "dependencies": {
+        "workbox-window": "^4.3.1"
     }
 }
