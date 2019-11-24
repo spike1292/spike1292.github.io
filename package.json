@@ -5,7 +5,10 @@
     "private": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "sw-manifest": "workbox injectManifest workbox-config.js"
+        "workbox": "workbox injectManifest workbox-config.js",
+        "rollup": "rollup --config rollup.config.mjs",
+        "build": "npm run rollup && npm run workbox",
+        "watch": "npm-watch"
     },
     "repository": {
         "type": "git",
@@ -16,8 +19,40 @@
     "bugs": {
         "url": "https://github.com/spike1292/spike1292.github.io/issues"
     },
-    "homepage": "https://henkbakker.net",
+    "homepage": "https://henkbakker.dev",
     "devDependencies": {
-        "workbox-cli": "3.1.0"
+        "@ampproject/rollup-plugin-closure-compiler": "^0.13.0",
+        "@babel/core": "^7.7.4",
+        "@babel/preset-env": "^7.7.4",
+        "npm-watch": "^0.6.0",
+        "rollup": "^1.27.4",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "workbox-cli": "4.3.1"
+    },
+    "dependencies": {
+        "workbox-window": "^4.3.1"
+    },
+    "watch": {
+        "rollup": "assets/js/{sw-register,service-worker.template}.mjs",
+        "workbox": {
+            "patterns": [
+                "_build",
+                "_site",
+                "assets",
+                "_drafts",
+                "_layouts",
+                "_posts",
+                "_sass",
+                "blog",
+                "./*.html"
+            ],
+            "extensions": "js,json,mjs,html,md,scss",
+            "ignore": [
+                "_site/service-worker.js"
+            ],
+            "delay": "2000",
+            "runOnChangeOnly": true
+        }
     }
 }
