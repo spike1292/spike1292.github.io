@@ -1,10 +1,11 @@
-window.ga =
-    window.ga ||
-    function() {
-        (ga.q = ga.q || []).push(arguments);
-    };
-ga.l = +new Date();
-
-ga("create", "UA-8856702-6", "auto");
-ga("set", "cd1", "online");
-ga("send", "pageview");
+"use strict";
+(function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-8856702-6", {
+        dimension1: "online"
+    });
+})();

@@ -66,6 +66,17 @@ workbox.routing.registerRoute(
     "GET"
 );
 
+workbox.googleAnalytics.initialize({
+    parameterOverrides: {
+        cd1: "offline"
+    },
+    hitFilter: params => {
+        const queueTimeInSeconds = Math.round(params.get("qt") / 1000);
+        params.set("cm1", queueTimeInSeconds);
+    }
+});
+
+// Handle skip waiting from app
 self.addEventListener("message", event => {
     if (event.data && event.data.type === "SKIP_WAITING") {
         workbox.core.skipWaiting();
