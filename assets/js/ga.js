@@ -1,3 +1,7 @@
+---
+# this ensures Jekyll reads the file to be transformed
+---
+
 "use strict";
 (function() {
     window.dataLayer = window.dataLayer || [];
@@ -5,7 +9,8 @@
         dataLayer.push(arguments);
     }
     gtag("js", new Date());
-    gtag("config", "UA-8856702-6", {
-        dimension1: "online"
+    gtag("config", "{{ site.analytics-google }}", {
+        dimension1: "online",
+        dimension2: "{{ site.env.BRANCH }}"
     });
 })();
