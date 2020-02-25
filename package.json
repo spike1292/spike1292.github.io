@@ -22,7 +22,7 @@
     "homepage": "https://henkbakker.dev",
     "devDependencies": {
         "@ampproject/rollup-plugin-closure-compiler": "^0.13.0",
-        "@babel/core": "^7.7.4",
+        "@babel/core": "^7.8.4",
         "@babel/preset-env": "^7.7.4",
         "npm-watch": "^0.6.0",
         "rollup": "^1.27.4",
