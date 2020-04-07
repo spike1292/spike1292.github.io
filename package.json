@@ -28,7 +28,7 @@
         "rollup": "^2.3.3",
         "rollup-plugin-babel": "^4.4.0",
         "rollup-plugin-node-resolve": "^5.2.0",
-        "workbox-cli": "4.3.1"
+        "workbox-cli": "5.1.2"
     },
     "dependencies": {
         "workbox-window": "^4.3.1"
