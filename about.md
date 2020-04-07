@@ -78,7 +78,9 @@ layout: page
 	<li>Scrum and Kanban</li>
 	<li>BDD &amp; TDD</li>
 	<li>Cloud
-		<li>Azure Web Apps</li>
-		<li>AWS Lambda, Cloudfront, S3</li>
+		<ul>
+			<li>Azure Web Apps</li>
+			<li>AWS Lambda, Cloudfront, S3</li>
+		</ul>
 	</li>
 </ul>
