@@ -4,7 +4,7 @@ import { Workbox } from "workbox-window";
 if ("serviceWorker" in navigator) {
     const wb = new Workbox("/service-worker.js");
 
-    wb.addEventListener("installed", event => {
+    wb.addEventListener("installed", (event) => {
         if (event.isUpdate) {
             if (confirm(`New content is available!. Click OK to refresh`)) {
                 window.location.reload();
@@ -12,13 +12,13 @@ if ("serviceWorker" in navigator) {
         }
     });
 
-    wb.addEventListener("waiting", event => {
+    wb.addEventListener("waiting", (event) => {
         console.log(
             `A new service worker has installed, but it can't activate until all tabs running the current version have fully unloaded.`
         );
     });
 
-    wb.addEventListener("message", event => {
+    wb.addEventListener("message", (event) => {
         if (event.data.type === "CACHE_UPDATED") {
             const { updatedURL } = event.data.payload;
 

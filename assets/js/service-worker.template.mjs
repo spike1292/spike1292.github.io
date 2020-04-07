@@ -10,79 +10,73 @@
  * and re-run your build process.
  * See https://goo.gl/2aRDsh
  */
-importScripts("/assets/js/workbox-v4.3.1/workbox-sw.js");
-workbox.setConfig({
-    modulePathPrefix: "/assets/js/workbox-v4.3.1/",
-    debug: true
-});
+import { setCacheNameDetails, skipWaiting, clientsClaim } from "workbox-core";
+import { registerRoute } from "workbox-routing";
+import { precacheAndRoute, cleanupOutdatedCaches } from "workbox-precaching";
+import { CacheFirst, StaleWhileRevalidate } from "workbox-strategies";
+import { ExpirationPlugin } from "workbox-expiration";
+import { BroadcastUpdatePlugin } from "workbox-broadcast-update";
+import * as googleAnalytics from "workbox-google-analytics";
 
-workbox.core.setCacheNameDetails({ prefix: "blog" });
+setCacheNameDetails({ prefix: "blog" });
+precacheAndRoute(self.__WB_MANIFEST);
+cleanupOutdatedCaches();
 
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-
-// workbox.precaching.suppressWarnings();
-workbox.precaching.precacheAndRoute([]);
-workbox.precaching.cleanupOutdatedCaches();
-
-workbox.routing.registerRoute(
+registerRoute(
     /assets\/images/,
-    new workbox.strategies.CacheFirst({
+    new CacheFirst({
         cacheName: "blog-images",
         plugins: [
-            new workbox.expiration.Plugin({
+            new ExpirationPlugin({
                 maxEntries: 10,
-                purgeOnQuotaError: true
-            })
-        ]
+                purgeOnQuotaError: true,
+            }),
+        ],
     }),
     "GET"
 );
-workbox.routing.registerRoute(
+registerRoute(
     /^https:\/\/.*\.cloudfront\.net\/.*/,
-    new workbox.strategies.StaleWhileRevalidate({
+    new StaleWhileRevalidate({
         cacheName: "cloudfront/js",
         plugins: [
-            new workbox.broadcastUpdate.Plugin({
-                channelName: "cloudfront-updates"
-            })
-        ]
+            new BroadcastUpdatePlugin({
+                channelName: "cloudfront-updates",
+            }),
+        ],
     }),
     "GET"
 );
-workbox.routing.registerRoute(
+registerRoute(
     /assets\/js/,
-    new workbox.strategies.StaleWhileRevalidate({
+    new StaleWhileRevalidate({
         cacheName: "local/js",
         plugins: [
-            new workbox.broadcastUpdate.Plugin({
-                channelName: "js-updates"
-            })
-        ]
+            new BroadcastUpdatePlugin({
+                channelName: "js-updates",
+            }),
+        ],
     }),
     "GET"
 );
 
-workbox.googleAnalytics.initialize({
+googleAnalytics.initialize({
     parameterOverrides: {
-        cd1: "offline"
+        cd1: "offline",
     },
-    hitFilter: params => {
+    hitFilter: (params) => {
         const queueTimeInSeconds = Math.round(params.get("qt") / 1000);
         params.set("cm1", queueTimeInSeconds);
-    }
+    },
 });
 
 // Handle skip waiting from app
-self.addEventListener("message", event => {
+self.addEventListener("message", (event) => {
     if (event.data && event.data.type === "SKIP_WAITING") {
-        workbox.core.skipWaiting();
+        skipWaiting();
     }
 });
 
 // Updating SW lifecycle to update the app after user triggered refresh
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
+skipWaiting();
+clientsClaim();

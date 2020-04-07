@@ -5,7 +5,7 @@ html {
 
 body {
     line-height: 1;
-    font: 20px $fontSans;
+    font-size: 20px;
     color: $alpha;
 }
 
@@ -13,7 +13,6 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: $fontSans;
     color: $beta;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
