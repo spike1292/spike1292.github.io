@@ -45,7 +45,7 @@ end
 desc "build and test website"
 task :test => ["build:prod"] do
     HTMLProofer.check_directory("_site", {
-        :href_ignore=> ['http://localhost:4000'], 
+        :url_ignore=> ['http://localhost:4000', 'https://www.googletagmanager.com'], 
         http_status_ignore: [999],
         :verbose => true
     }).run
