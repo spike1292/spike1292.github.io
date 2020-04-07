@@ -42,6 +42,12 @@ layout: page
 			<li>Bootstrap</li>
 		</ul>
 	</li>
+	<li>Headless CMS
+		<ul>
+			<li>Wordpress</li>
+			<li>Sitecore 9 with JSS</li>
+		</ul>
+	</li>
 	<li>Mobile
 		<ul>
 			<li>iOS (Objective C)</li>
