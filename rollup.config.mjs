@@ -1,10 +1,11 @@
-import babel from "rollup-plugin-babel";
 import compiler from "@ampproject/rollup-plugin-closure-compiler";
-import resolve from "rollup-plugin-node-resolve";
+import resolve from "@rollup/plugin-node-resolve";
+import babel from "rollup-plugin-babel";
+import replace from "@rollup/plugin-replace";
 
 // The version of Chromium used by Samsung Internet 6.x.
 const BROWSER_TARGET = {
-    browsers: ["chrome >= 56"]
+    browsers: ["chrome >= 56"],
 };
 
 export default [
@@ -18,44 +19,47 @@ export default [
                         "@babel/preset-env",
                         {
                             targets: BROWSER_TARGET,
-                            modules: false
-                        }
-                    ]
-                ]
+                            modules: false,
+                        },
+                    ],
+                ],
             }),
-            compiler()
+            compiler(),
         ],
         output: [
             {
                 file: "assets/js/sw-register.js",
-                format: "iife"
+                format: "iife",
             },
             {
                 file: "_site/assets/js/sw-register.js",
-                format: "iife"
-            }
-        ]
+                format: "iife",
+            },
+        ],
     },
     {
         input: "assets/js/service-worker.template.mjs",
         plugins: [
             resolve(),
+            replace({
+                "process.env.NODE_ENV": JSON.stringify("production"),
+            }),
             babel({
                 presets: [
                     [
                         "@babel/preset-env",
                         {
                             targets: BROWSER_TARGET,
-                            modules: false
-                        }
-                    ]
-                ]
+                            modules: false,
+                        },
+                    ],
+                ],
             }),
-            compiler()
+            compiler(),
         ],
         output: {
             file: "_build/service-worker.js",
-            format: "iife"
-        }
-    }
+            format: "iife",
+        },
+    },
 ];
