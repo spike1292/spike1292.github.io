@@ -17,8 +17,35 @@ layout: page
 	<li>Javascript
 		<ul>
 			<li>NodeJS</li>
-			<li>Angular &amp; AngularJS</li>
-			<li>ReactJS</li>
+			<li>Angular</li>
+			<li>React</li>
+		</ul>
+	</li>
+	<li>Continuous Integration &amp; Continuous Delivery
+		<ul>
+			<li>Jenkins</li>
+			<li>GitLab</li>
+			<li>Octopus</li>
+		</ul>
+	</li>
+	<li>Containers
+		<ul>
+			<li>Docker</li>
+			<li>K8S</li>
+		</ul>
+	</li>
+	<li>HTML Accessibility</li>
+	<li>Responsive (Mobile First) Web design</li>
+	<li>CSS
+		<ul>
+			<li>Sass</li>
+			<li>Bootstrap</li>
+		</ul>
+	</li>
+	<li>Headless CMS
+		<ul>
+			<li>Wordpress</li>
+			<li>Sitecore 9 with JSS</li>
 		</ul>
 	</li>
 	<li>Mobile
@@ -26,14 +53,6 @@ layout: page
 			<li>iOS (Objective C)</li>
 			<li>Nativescript</li>
 			<li>Cordova (Ionic, Phonegap)</li>
-		</ul>
-	</li>
-	<li>HTML</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS
-		<ul>
-			<li>Sass</li>
-			<li>Bootstrap</li>
 		</ul>
 	</li>
 	<li>Buildtools
@@ -58,5 +77,10 @@ layout: page
 	</li>
 	<li>Scrum and Kanban</li>
 	<li>BDD &amp; TDD</li>
-	<li>Continuous Integration &amp; Continuous Delivery</li>
+	<li>Cloud
+		<ul>
+			<li>Azure Web Apps</li>
+			<li>AWS Lambda, Cloudfront, S3</li>
+		</ul>
+	</li>
 </ul>
