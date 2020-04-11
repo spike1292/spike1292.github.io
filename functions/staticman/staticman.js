@@ -14,24 +14,24 @@ exports.handler = (event, context, callback) => {
         version: "2",
     };
 
-    new Staticman(params).then((staticman) => {
-        staticman.setConfigPath();
-        staticman.setIp(event.headers["client-ip"]);
-        staticman.setUserAgent(event.headers["user-agent"]);
+    const body = qs.parse(event.body);
+    const options = body.options || {};
 
-        const body = qs.parse(event.body);
-        const options = body.options || {};
+    new Staticman(params)
+        .then((staticman) => {
+            staticman.setConfigPath();
+            staticman.setIp(event.headers["client-ip"]);
+            staticman.setUserAgent(event.headers["user-agent"]);
 
-        staticman
-            .processEntry(body.fields, options)
-            .then(() => {
-                callback(null, {
-                    statusCode: 200,
-                    body: "Success",
-                });
-            })
-            .catch((error) => {
-                callback(error);
+            return staticman.processEntry(body.fields, options);
+        })
+        .then(() => {
+            callback(null, {
+                statusCode: 200,
+                body: "Success",
             });
-    });
+        })
+        .catch((error) => {
+            callback(error);
+        });
 };
