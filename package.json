@@ -4,6 +4,7 @@
     "description": "Jekyll powered blog",
     "private": true,
     "scripts": {
+        "postinstall": "cd functions/staticman && npm i",
         "test": "echo \"Error: no test specified\" && exit 1",
         "workbox": "workbox injectManifest workbox-config.js",
         "rollup": "rollup --config rollup.config.mjs",

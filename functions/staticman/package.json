@@ -1,0 +1,13 @@
+{
+    "name": "staticman-netlify-function",
+    "version": "1.0.0",
+    "description": "Staticman with netlify functions",
+    "main": "index.js",
+    "author": "Prabashwara Seneviratne",
+    "license": "ISC",
+    "dependencies": {
+        "qs": "^6.9.1",
+        "staticman": "eduardoboucas/staticman#0abbb37e14dd318f1cdd231cb99ab7d5d4608775",
+        "url-pattern": "^1.0.3"
+    }
+}

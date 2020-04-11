@@ -20,6 +20,7 @@
 
 [build]
     publish = "_site"
+    functions = "functions"
     command = "bundle exec rake build:prod"
 
 [[redirects]]
