@@ -25,7 +25,7 @@
         "@babel/core": "^7.9.0",
         "@babel/preset-env": "^7.9.5",
         "@rollup/plugin-node-resolve": "^7.1.1",
-        "@rollup/plugin-replace": "^2.3.1",
+        "@rollup/plugin-replace": "^2.3.2",
         "npm-watch": "^0.6.0",
         "rollup": "^2.6.1",
         "rollup-plugin-babel": "^4.4.0",
