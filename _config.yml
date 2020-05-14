@@ -140,6 +140,7 @@ exclude:
     - rollup.config.mjs
     - assets/js/sw-register.mjs
     - assets/js/service-worker.template.mjs
+    - assets/js/lazy-load.mjs
 
 jekyll-mentions:
     base_url: https://github.com
