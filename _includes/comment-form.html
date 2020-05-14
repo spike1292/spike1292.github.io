@@ -1,0 +1,97 @@
+<!-- Start comment form -->
+<div id="respond" class="comment__form">
+    <h2 class="title">
+        Leave a comment
+    </h2>
+    <form
+        id="comment-form"
+        class="js-form"
+        method="post"
+        action="https://spike1292-staticman.herokuapp.com/v2/entry/spike1292/spike1292.github.io/master/comments"
+    >
+        <div class="form__group">
+            <label for="comment-form-name"
+                >Name
+                <input
+                    type="text"
+                    id="comment-form-name"
+                    name="fields[name]"
+                    required
+                    spellcheck="false"
+                    placeholder="Your name"
+                />
+            </label>
+            <label for="comment-form-email"
+                >E-mail
+                <input
+                    type="email"
+                    id="comment-form-email"
+                    name="fields[email]"
+                    required
+                    spellcheck="false"
+                    placeholder="email@domain.com"
+                />
+            </label>
+            <label for="comment-form-url"
+                >Website (optional)
+                <input
+                    type="url"
+                    id="comment-form-url"
+                    name="fields[url]"
+                    placeholder="https://domain.com"
+                />
+            </label>
+        </div>
+        <div class="form__group">
+            <label for="comment-form-message"
+                >Comment
+                <textarea
+                    rows="6"
+                    id="comment-form-message"
+                    name="fields[message]"
+                    required
+                    spellcheck="true"
+                    placeholder="Your message"
+                ></textarea>
+            </label>
+        </div>
+        <input
+            type="hidden"
+            name="options[origin]"
+            value="{{ page.url | relative_url }}"
+        />
+        <input
+            type="hidden"
+            name="options[parent]"
+            value="{{ page.url | relative_url }}"
+        />
+        <input
+            type="hidden"
+            id="comment-post-id"
+            name="options[slug]"
+            value="{{ page.slug }}"
+        />
+        <input
+            type="hidden"
+            name="options[reCaptcha][siteKey]"
+            value="{{ site.reCaptcha.siteKey }}"
+        />
+        <input
+            type="hidden"
+            name="options[reCaptcha][secret]"
+            value="{{ site.reCaptcha.secret }}"
+        />
+        <!-- Start comment form alert messaging -->
+        <div class="hidden js-notice notice">
+            <p class="js-notice-text"></p>
+        </div>
+        <!-- End comment form alert messaging -->
+        <div
+            class="g-recaptcha form__group"
+            data-sitekey="{{ site.reCaptcha.siteKey }}"
+        ></div>
+        <button type="submit" id="comment-form-submit">Send comment</button>
+    </form>
+</div>
+<!-- End comment form -->
+<script async src="https://www.google.com/recaptcha/api.js"></script>

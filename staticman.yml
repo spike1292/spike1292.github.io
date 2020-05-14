@@ -70,7 +70,7 @@ comments:
 
     # reCaptcha
     reCaptcha:
-        enabled: false
-        siteKey: ""
-        secret: ""
+        enabled: true
+        siteKey: "6Lf7XvcUAAAAAOO4mPmoLUqwF6Y1CFEdDUGNEiFM"
+        secret: "CXLQuk4bY9lCPSmBz5CkH2NEdaCgWPe0PKeXNEDOfqmvkJM3SihPjs7jR31pS7blQAOIN85eVxE03HIImG0lwcM/OBRPUIQuWTDOWvEsztmNjZUc7SLu+qHMBLhreizIUgCH6gCyjJL5lRepPYFkegWYQstRFKqNBRquG293y4j0g32Fo7pm2t8VDIdmRkLXvZSf22ZkhW9L1VAUmIzWh4C52uq3ikJADfE523UKT0ADNts91oA9SFfLRFFgLTolXb/0EWP+LiAJxhXW8LaeSLCSUE5dbb67QKulRoA1+AbJ38xrioRcoPLdmALlW5YphVTmwd1X90SE27S1saacoA=="
 # EOF
