@@ -19,11 +19,12 @@ layout: compress
 
     {% feed_meta %}
 
-    <style>
-    {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
-    {{ scss_sheet | scssify }}
+    <style type="text/css">
+    {% capture criticalcss %}{% include critical.scss %}{% endcapture %}
+    {{ criticalcss | scssify }}
     </style>
 
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" media="print" onload="this.media='all'"/>
 </head>
 <body>
 
