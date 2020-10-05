@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'html-proofer','~> 3.15'
-gem 'jekyll', '~> 4.0'
+gem 'jekyll', '~> 4.1'
 gem "rake", "~> 13.0"
 
 gem "jekyll-seo-tag", "~> 2.6"
