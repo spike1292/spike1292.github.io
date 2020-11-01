@@ -10,6 +10,34 @@ const BROWSER_TARGET = {
 
 export default [
     {
+        input: "assets/js/lazy-load.mjs",
+        plugins: [
+            resolve(),
+            babel({
+                presets: [
+                    [
+                        "@babel/preset-env",
+                        {
+                            targets: BROWSER_TARGET,
+                            modules: false,
+                        },
+                    ],
+                ],
+            }),
+            compiler(),
+        ],
+        output: [
+            {
+                file: "assets/js/lazy-load.js",
+                format: "iife",
+            },
+            {
+                file: "_site/assets/js/lazy-load.js",
+                format: "iife",
+            },
+        ],
+    },
+    {
         input: "assets/js/sw-register.mjs",
         plugins: [
             resolve(),
