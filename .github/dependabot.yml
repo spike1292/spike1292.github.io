@@ -1,0 +1,110 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: html-proofer
+    versions:
+    - 3.18.5
+    - 3.18.6
+    - 3.18.8
+    - 3.19.0
+  - dependency-name: nokogiri
+    versions:
+    - 1.11.1
+    - 1.11.2
+  - dependency-name: rake
+    versions:
+    - 13.0.3
+  - dependency-name: jekyll
+    versions:
+    - 4.2.0
+  - dependency-name: jekyll-seo-tag
+    versions:
+    - 2.7.1
+  - dependency-name: jekyll-feed
+    versions:
+    - 0.15.1
+  - dependency-name: kramdown
+    versions:
+    - 2.3.0
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rollup
+    versions:
+    - 2.42.2
+    - 2.43.1
+    - 2.44.0
+    - 2.45.1
+  - dependency-name: workbox-routing
+    versions:
+    - 6.1.2
+  - dependency-name: workbox-broadcast-update
+    versions:
+    - 6.1.2
+  - dependency-name: workbox-window
+    versions:
+    - 6.1.2
+  - dependency-name: workbox-strategies
+    versions:
+    - 6.1.2
+  - dependency-name: workbox-core
+    versions:
+    - 6.0.2
+    - 6.1.0
+    - 6.1.1
+    - 6.1.2
+  - dependency-name: workbox-google-analytics
+    versions:
+    - 6.0.2
+    - 6.1.0
+    - 6.1.1
+    - 6.1.2
+  - dependency-name: workbox-precaching
+    versions:
+    - 6.0.2
+    - 6.1.0
+    - 6.1.1
+    - 6.1.2
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.10
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.10
+    - 7.13.8
+  - dependency-name: "@babel/preset-env"
+    versions:
+    - 7.12.11
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.10
+    - 7.13.8
+    - 7.13.9
+  - dependency-name: "@rollup/plugin-replace"
+    versions:
+    - 2.3.4
+    - 2.4.0
+    - 2.4.1
+  - dependency-name: "@rollup/plugin-node-resolve"
+    versions:
+    - 11.1.0
+    - 11.1.1
+    - 11.2.0
+  - dependency-name: npm-watch
+    versions:
+    - 0.7.0
+  - dependency-name: "@ampproject/rollup-plugin-closure-compiler"
+    versions:
+    - 0.26.0
