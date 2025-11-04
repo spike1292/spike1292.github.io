@@ -1,6 +1,6 @@
 # main text of home
 name: Henk Bakker
-bio: TypeScript addict, Angular fanboy, Docker hacker
+bio: Software Engineer who loves to build web platforms
 
 # twitter summary info
 description: A blog about web development with Angular & React
@@ -37,8 +37,8 @@ disqus:
 
 # if you don't have any of social below, comment the line
 #facebook: spike1292
-twitter:
-    username: spike1292
+# twitter:
+#     username: spike1292
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
@@ -59,7 +59,7 @@ keybase: spike1292
 authors:
     henkbakker:
         name: Henk Bakker
-        bio: TypeScript addict, Angular fanboy, Docker hacker
+        bio: Software Engineer and founder of CodeCask
         external-image: false
         picture: assets/images/henk.jpg
         twitter: spike1292
